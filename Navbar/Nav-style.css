@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: red 2px solid;
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -40,6 +41,7 @@ nav {
 }
 .burger {
   display: none;
+  cursor: pointer;
 }
 .burger div {
   width: 25px;
@@ -71,18 +73,21 @@ nav {
     background-color: lightcoral;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     width: 50%;
-    transform: translatex(100%);
+    transform: translatex(0%);
     transition: transform 0.5s ease-in;
+    -webkit-transform: translatex(0%);
+    -moz-transform: translatex(0%);
+    -ms-transform: translatex(0%);
+    -o-transform: translatex(0%);
   }
-  .nav-links li {
+  /* .nav-links li {
     opacity: 0;
-  }
+  } */
   .burger {
     display: block;
-    cursor: pointer;
   }
 }
 @keyframes navLinkFade {
